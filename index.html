@@ -105,7 +105,7 @@
         <div class="video-container">
             <video id="liveStream" class="video-js vjs-default-skin" controls autoplay>
                 <!-- Example Live Stream (Replace with your URL) -->
-                <source src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" type="application/x-mpegURL">
+                <source src="https://webplayer-live.pages.dev?url=https://jiotvbpklive.cdn.jio.com/bpk-tv/IDCDemo_IPL23_Sports18_MOB/Fallback/index.m3u8" type="application/x-mpegURL">
                 Your browser does not support video playback.
             </video>
         </div>
@@ -118,13 +118,13 @@
         var video = document.getElementById('liveStream');
         if (Hls.isSupported()) {
             var hls = new Hls();
-            hls.loadSource("https://www.youtube.com/live/HXSTtBn3JkM?si=nco73qAJmTMbxE8i"); // Replace with your actual M3U8 URL
+            hls.loadSource("https://webplayer-live.pages.dev?url=https://jiotvbpklive.cdn.jio.com/bpk-tv/IDCDemo_IPL23_Sports18_MOB/Fallback/index.m3u8"); // Replace with your actual M3U8 URL
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                 video.play();
             });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = "https://www.youtube.com/live/HXSTtBn3JkM?si=nco73qAJmTMbxE8i"; // Replace with your actual M3U8 URL
+            video.src = "https://webplayer-live.pages.dev?url=https://jiotvbpklive.cdn.jio.com/bpk-tv/IDCDemo_IPL23_Sports18_MOB/Fallback/index.m3u8"; // Replace with your actual M3U8 URL
             video.addEventListener('loadedmetadata', function() {
                 video.play();
             });
